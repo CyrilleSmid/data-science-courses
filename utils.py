@@ -9,7 +9,7 @@ def plot_val_acc_loss(history, metrics=['loss', 'acc']):
     fig = make_subplots(rows=len(metrics), cols=1)
     for i, metric in enumerate(metrics):
         loss_values = history_dict[metric]
-        val_loss_values = history_dict['val' + metric]
+        val_loss_values = history_dict['val_' + metric]
         fig.add_trace(go.Scatter(y=loss_values, 
                                 line=dict(color='royalblue', width=6),
                                 name = metric),
